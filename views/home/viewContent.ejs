@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Content</title>
+
+    <script
+      type="text/javascript"
+      src="/assets/home/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="/assets/home/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/home/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/home/profile.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/home/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/assets/home/dropdown.css" />
+  </head>
+  <body>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li style="float: left">
+        <div class="dropdown">
+          <div class="dropbtn">Content</div>
+          <div class="dropdown-content">
+            <a href="/home/viewContent">View Content</a>
+            <a href="/home/uploadContent">Upload Content</a>
+            <a href="/home/deleteContent">Delete Content</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="container emp-profile">
+      <form name="homeSupport" method="POST">
+        <h1 align:middle>Contents</h1>
+        <h5 align='center'>😍 Click to download 😎</h5>
+        <br>
+    
+        <% for(var i=0; i < qList.length; i++){ %>
+            <div style="text-align: center">
+            <a href="/home/download/<%=qList[i]%>"><%=qList[i]%></a>
+            </div> 
+            <br>
+        <% } %>
+      </form>
+    </div>
+  </body>
+</html>
