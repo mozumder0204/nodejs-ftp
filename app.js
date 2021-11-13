@@ -3,7 +3,7 @@ var express = require("express");
 var login = require("./controllers/login");
 var home = require("./controllers/home");
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 //CONFIGURATION
 app.set("view engine", "ejs");
